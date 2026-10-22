@@ -1,0 +1,6 @@
+{
+  "name": "Blog Ông Chủ Tuấn Tử Tế",
+  "description": "Blog cá nhân hiện đại tích hợp tính năng soạn bài viết và chia sẻ chéo lên các mạng xã hội của Ông Chủ Tuấn Tử Tế.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
