@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tâm An Vạn Sự An | Trịnh An Chia Sẻ</title>
+  <title>Tam An Van Su An | Trinh An Chia Se</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
   <style>
     body { font-family: "Plus Jakarta Sans", sans-serif; }
     .font-serif-title { font-family: "Playfair Display", serif; }
@@ -22,129 +22,99 @@
   </style>
 </head>
 <body class="bg-[#030712] text-slate-100 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
-  <!-- Nút Nhạc Thiền Nổi -->
   <div class="fixed bottom-6 right-6 z-50">
     <button onclick="toggleAudio()" class="glass px-4 py-2.5 rounded-full flex items-center gap-3 border border-cyan-500/40 shadow-2xl hover:bg-white/10 transition cursor-pointer">
       <div id="soundWave" class="sound-wave flex items-center gap-1 h-5 opacity-40"><span></span><span></span><span></span><span></span></div>
-      <span id="musicText" class="text-xs font-semibold text-cyan-300">Bật Nhạc Thiền</span>
+      <span id="musicText" class="text-xs font-semibold text-cyan-300">Bat Nhac Thien</span>
       <span class="text-sm">🎵</span>
     </button>
   </div>
   <audio id="bgMusic" loop preload="none">
     <source src="https://assets.mixkit.co/music/preview/mixkit-meditation-flute-and-bells-ambient-610.mp3" type="audio/mp3">
   </audio>
-  <!-- Thanh Điều Hướng Rộng -->
-  <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-10 border-b border-slate-800/60">
+  <nav class="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-10 border-b border-slate-800/60">
     <div class="flex items-center gap-3">
       <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-cyan-500 via-emerald-400 to-amber-300 flex items-center justify-center font-extrabold text-slate-950 text-xl shadow-lg shadow-cyan-500/20">TA</div>
       <div>
-        <span class="font-extrabold text-xl tracking-tight text-white block leading-tight">Trịnh An Chia Sẻ</span>
-        <span class="text-[11px] text-cyan-400 font-medium tracking-wider uppercase">Tâm An Vạn Sự An</span>
+        <span class="font-extrabold text-xl tracking-tight text-white block leading-tight">Trinh An Chia Se</span>
+        <span class="text-[11px] text-cyan-400 font-medium tracking-wider uppercase">Tam An Van Su An</span>
       </div>
     </div>
     <div class="flex items-center gap-6">
-      <a href="#art-gallery" class="text-sm font-semibold text-cyan-400">Bộ Sưu Tập Tranh</a>
-      <a href="#video-hub" class="text-sm text-slate-400 hover:text-white transition">Video Chia Sẻ</a>
-      <a href="#ket-noi" class="px-5 py-2 rounded-full glass hover:bg-white/15 text-xs font-bold uppercase tracking-wider text-white border border-cyan-500/30 transition">Kết Nối</a>
+      <a href="#art-gallery" class="text-sm font-semibold text-cyan-400">Bo Suu Tap Tranh</a>
+      <a href="#video-hub" class="text-sm text-slate-400 hover:text-white transition">Video Chia Se</a>
+      <a href="#ket-noi" class="px-5 py-2 rounded-full glass hover:bg-white/15 text-xs font-bold uppercase tracking-wider text-white border border-cyan-500/30 transition">Ket Noi</a>
     </div>
   </nav>
-  <!-- Tiêu Đề Hero -->
   <header class="max-w-5xl mx-auto px-6 pt-10 pb-8 text-center relative z-10">
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-4 border border-emerald-500/30">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span class="text-xs font-semibold text-emerald-300 tracking-widest uppercase">Triết Lý Thân - Tâm - Trí</span>
+      <span class="text-xs font-semibold text-emerald-300 tracking-widest uppercase">Triet Ly Than - Tam - Tri</span>
     </div>
     <h1 class="text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight mb-4">
-      <span class="font-serif-title italic font-normal text-slate-300">Tâm An</span><br>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-300 to-amber-300">Vạn Sự Tự Nhiên An</span>
+      <span class="font-serif-title italic font-normal text-slate-300">Tam An</span><br>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-300 to-amber-300">Van Su Tu Nhien An</span>
     </h1>
     <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto font-light">
-      Nơi hội tụ những bức họa danh ngôn chuyển tải năng lượng an lành, giúp tâm định tĩnh, thân vững chãi và cuộc sống thong dong.
+      Noi hoi tu nhung buc hoa danh ngon chuyen tai nang luong an lanh, giup tam dinh tinh, than vung chai va cuoc song thong dong.
     </p>
   </header>
-  <!-- KHỐI 1: TRIỂN LÃM HÌNH ẢNH RỘNG TOÀN KHUNG (Full-Width Gallery) -->
-  <section id="art-gallery" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 relative z-10">
+  <!-- KHOI 1: TRIEN LAM TRANH TOAN MAN HINH -->
+  <section id="art-gallery" class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 relative z-10">
     <div class="text-center mb-6">
-      <h2 class="text-2xl sm:text-3xl font-extrabold">Triển Lãm Tranh Nghệ Thuật</h2>
-      <p class="text-slate-400 text-xs mt-1">Tự động chuyển tranh sau 5 giây • Bấm tranh nhỏ bên dưới để xem trực tiếp</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Trien Lam Tranh Nghe Thuat</h2>
+      <p class="text-slate-400 text-xs mt-1">Tu dong chuyen tranh sau 5 giay - Bam vao tranh con de xem truc tiep</p>
     </div>
-    <!-- Khung Ảnh Preview Lớn Trung Tâm (Cố định tỷ lệ 9:16 tối ưu) -->
-    <div class="max-w-xl mx-auto glass p-3 sm:p-4 rounded-3xl mb-8 border border-white/15 shadow-2xl relative">
+    <!-- Khung xem anh lon -->
+    <div class="max-w-md mx-auto glass p-3 rounded-3xl mb-8 border border-white/15 shadow-2xl relative">
       <div class="relative w-full aspect-[9/15] rounded-2xl overflow-hidden bg-black/80 flex items-center justify-center">
-        <img id="mainSlideImg" src="" alt="Tranh Trịnh An" class="w-full h-full object-contain cursor-pointer transition-opacity duration-300" onclick="openModal(this.src)">
-        <!-- Nút Lùi/Tiến nổi bật -->
-        <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full glass hover:bg-white/20 flex items-center justify-center text-white text-2xl font-bold transition shadow-lg z-20 cursor-pointer">‹</button>
-        <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full glass hover:bg-white/20 flex items-center justify-center text-white text-2xl font-bold transition shadow-lg z-20 cursor-pointer">›</button>
+        <img id="mainSlideImg" src="" alt="Tranh Trinh An" class="w-full h-full object-contain cursor-pointer transition-opacity duration-300" onclick="openModal(this.src)">
+        <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass hover:bg-white/20 flex items-center justify-center text-white text-2xl font-bold transition z-20 cursor-pointer">‹</button>
+        <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass hover:bg-white/20 flex items-center justify-center text-white text-2xl font-bold transition z-20 cursor-pointer">›</button>
         <div class="absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full glass text-xs text-slate-200 font-medium z-20" id="slideBadge">1 / 1</div>
       </div>
-      <div class="flex justify-center mt-3">
-        <button id="slideControlBtn" onclick="toggleSlideShow()" class="text-xs text-cyan-300 px-4 py-1.5 rounded-full glass hover:bg-white/10 transition cursor-pointer">⏸ Tạm dừng tự động chuyển</button>
-      </div>
     </div>
-    <!-- DẢI ẢNH THU NHỎ TRẢI ĐỀU RỘNG SANG 2 BÊN -->
+    <!-- DAI ANH NHO DAI DEU RONG 2 BEN -->
     <div class="text-center mb-3">
-      <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">— Danh Sách Toàn Bộ Tác Phẩm —</span>
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">- Danh Sach Toan Bo Tac Pham -</span>
     </div>
     <div id="thumbGrid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 w-full"></div>
   </section>
-  <!-- KHỐI 2: KHU VỰC VIDEO YOUTUBE ĐỨNG PHÍA DƯỚI -->
+  <!-- KHOI 2: VIDEO YOUTUBE DUNG SAU -->
   <section id="video-hub" class="max-w-4xl mx-auto px-6 py-16 relative z-10">
     <div class="text-center mb-6">
-      <div class="inline-block px-3 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase mb-2">Video Trực Tiếp</div>
-      <h2 class="text-2xl sm:text-3xl font-bold">Khu Vực Video YouTube</h2>
-      <p class="text-slate-400 text-xs mt-1">Dán liên kết YouTube hoặc Shorts để theo dõi ngay tại trang</p>
+      <h2 class="text-2xl sm:text-3xl font-bold">Khu Vuc Video YouTube</h2>
+      <p class="text-slate-400 text-xs mt-1">Dan lien ket YouTube hoac Shorts de theo doi ngay tai trang</p>
     </div>
     <div class="glass p-3 rounded-2xl mb-4 max-w-2xl mx-auto flex gap-2">
-      <input type="text" id="ytUrlInput" placeholder="Dán link YouTube (watch, youtu.be, shorts)..." class="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-cyan-400">
-      <button onclick="loadCustomVideo()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-xs hover:opacity-90 transition cursor-pointer">Phát Video</button>
+      <input type="text" id="ytUrlInput" placeholder="Dan link YouTube hoac Shorts vao day..." class="flex-1 px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-cyan-400">
+      <button onclick="loadCustomVideo()" class="px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-xs hover:opacity-90 transition cursor-pointer">Phat Video</button>
     </div>
     <div class="glass p-2 rounded-3xl border border-white/15 aspect-video relative max-w-3xl mx-auto shadow-2xl overflow-hidden">
       <iframe id="mainYtPlayer" class="absolute inset-0 w-full h-full rounded-2xl border-0" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
     </div>
   </section>
-  <!-- Modal Phóng To Ảnh Toàn Màn Hình -->
+  <!-- Modal phong to anh -->
   <div id="imageModal" class="fixed inset-0 bg-black/95 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 cursor-pointer" onclick="closeModal()">
     <img id="modalImg" class="max-w-full max-h-[90vh] rounded-2xl object-contain shadow-2xl border border-white/10">
     <button class="absolute top-6 right-6 text-white text-3xl font-light hover:text-cyan-400">&times;</button>
   </div>
-  <!-- Form Kết Nối -->
-  <section id="ket-noi" class="max-w-xl mx-auto px-6 py-16 text-center relative z-10">
-    <h2 class="text-3xl font-extrabold mb-2">Đồng Hành & Kết Nối</h2>
-    <p class="text-slate-400 text-sm mb-6">Tâm an vạn sự an - Cùng gieo mầm năng lượng bình an</p>
-    <div class="glass p-6 rounded-2xl flex flex-col gap-4 text-left">
-      <div>
-        <label class="block text-xs font-semibold text-slate-300 mb-1">Họ và tên</label>
-        <input type="text" placeholder="Nhập họ và tên..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400 text-sm text-white">
-      </div>
-      <div>
-        <label class="block text-xs font-semibold text-slate-300 mb-1">Số điện thoại / Zalo</label>
-        <input type="text" placeholder="Nhập số liên hệ..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400 text-sm text-white">
-      </div>
-      <div>
-        <label class="block text-xs font-semibold text-slate-300 mb-1">Lời nhắn</label>
-        <textarea rows="3" placeholder="Điều bạn muốn cùng Trịnh An sẻ chia..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400 text-sm text-white"></textarea>
-      </div>
-      <button class="w-full py-3 mt-1 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold hover:opacity-90 transition">Gửi Thông Điệp</button>
-    </div>
-  </section>
-  <footer class="max-w-7xl mx-auto px-6 py-8 border-t border-slate-800 text-center text-xs text-slate-500 relative z-10">
-    <p>© 2026 Trịnh An Chia Sẻ | Tâm An Vạn Sự An | trinhan.life</p>
+  <footer class="w-full max-w-7xl mx-auto px-6 py-8 border-t border-slate-800 text-center text-xs text-slate-500 relative z-10">
+    <p>&copy; 2026 Trinh An Chia Se | Tam An Van Su An | trinhan.life</p>
   </footer>
-  <!-- Scripts Xử Lý -->
   <script>
     const images = [];
     let currentIndex = 0;
-    let slideInterval = null;
-    let isRunning = true;
+    let slideTimer = null;
     function initGallery() {
       if (!images || images.length === 0) return;
       setSlide(0);
       renderThumbs();
-      startSlideTimer();
+      slideTimer = setInterval(nextSlide, 5000);
     }
     function renderThumbs() {
-      const container = document.getElementById("thumbGrid");
-      container.innerHTML = images.map((src, i) => `
+      const box = document.getElementById("thumbGrid");
+      box.innerHTML = images.map((src, i) => `
         <div id="thumb-${i}" class="glass-card rounded-xl overflow-hidden aspect-[9/16] cursor-pointer relative group transition-all duration-300" onclick="setSlide(${i})">
           <img src="${src}" class="w-full h-full object-cover group-hover:scale-105 transition" loading="lazy">
         </div>
@@ -175,44 +145,14 @@
     }
     function nextSlide() { setSlide(currentIndex + 1); }
     function prevSlide() { setSlide(currentIndex - 1); }
-    function startSlideTimer() {
-      if (slideInterval) clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 5000);
-      isRunning = true;
-      document.getElementById("slideControlBtn").innerText = "⏸ Tạm dừng tự động chuyển";
-    }
-    function toggleSlideShow() {
-      if (isRunning) {
-        clearInterval(slideInterval);
-        isRunning = false;
-        document.getElementById("slideControlBtn").innerText = "▶ Tiếp tục tự động chuyển";
-      } else {
-        startSlideTimer();
-      }
-    }
-    function openModal(src) {
-      document.getElementById("modalImg").src = src;
-      document.getElementById("imageModal").classList.remove("hidden");
-    }
-    function closeModal() {
-      document.getElementById("imageModal").classList.add("hidden");
-    }
+    function openModal(src) { document.getElementById("modalImg").src = src; document.getElementById("imageModal").classList.remove("hidden"); }
+    function closeModal() { document.getElementById("imageModal").classList.add("hidden"); }
     function toggleAudio() {
       const a = document.getElementById("bgMusic");
       const w = document.getElementById("soundWave");
       const t = document.getElementById("musicText");
-      if (a.paused) {
-        a.play().then(() => {
-          w.classList.remove("opacity-40");
-          t.innerText = "Đang Phát Nhạc";
-          t.classList.add("text-emerald-300");
-        }).catch(e => console.log(e));
-      } else {
-        a.pause();
-        w.classList.add("opacity-40");
-        t.innerText = "Bật Nhạc Thiền";
-        t.classList.remove("text-emerald-300");
-      }
+      if (a.paused) { a.play(); w.classList.remove("opacity-40"); t.innerText = "Dang Phat"; }
+      else { a.pause(); w.classList.add("opacity-40"); t.innerText = "Bat Nhac Thien"; }
     }
     function loadCustomVideo() {
       const input = document.getElementById("ytUrlInput").value.trim();
@@ -220,11 +160,9 @@
       const match = input.match(/^.*(youtu.be\\/|v\\/|u\\/\\w\\/|embed\\/|watch\\?v=|&v=|shorts\\/)([^#&?]*).*/);
       if (match && match[2].length === 11) {
         document.getElementById("mainYtPlayer").src = "https://www.youtube.com/embed/" + match[2] + "?autoplay=1";
-      } else {
-        alert("Vui lòng dán đúng liên kết YouTube hoặc Shorts.");
       }
     }
-    window.addEventListener("DOMContentLoaded", initGallery);
+    window.onload = initGallery;
   </script>
 </body>
 </html>
