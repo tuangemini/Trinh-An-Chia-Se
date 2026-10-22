@@ -15,11 +15,9 @@
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
 
-  <!-- Hiệu ứng vầng sáng nền -->
   <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/3 -right-40 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
 
-  <!-- Header -->
   <nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center relative z-10">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center font-bold text-slate-950 text-lg shadow-lg shadow-cyan-500/20">TA</div>
@@ -32,7 +30,6 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <header class="max-w-4xl mx-auto px-6 pt-10 pb-12 text-center relative z-10">
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-6 border border-cyan-500/30">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -51,7 +48,7 @@
     </div>
   </header>
 
-  <!-- KHU VỰC 1: XEM & PHÁT VIDEO YOUTUBE -->
+  <!-- Video YouTube -->
   <section id="video-hub" class="max-w-4xl mx-auto px-6 py-10 relative z-10">
     <div class="text-center mb-6">
       <div class="inline-block px-3 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold uppercase mb-2">Trình Phát Video Trực Tiếp</div>
@@ -59,13 +56,11 @@
       <p class="text-slate-400 text-sm mt-1">Dán link YouTube (hoặc Shorts) vào ô dưới đây để phát trực tiếp ngay trên trang</p>
     </div>
 
-    <!-- Ô dán link YouTube -->
     <div class="glass p-3 rounded-2xl mb-5 max-w-2xl mx-auto flex flex-col sm:flex-row gap-3">
-      <input type="text" id="ytUrlInput" placeholder="Dán link YouTube (ví dụ: https://www.youtube.com/watch?v=... hoặc Shorts)..." class="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400">
+      <input type="text" id="ytUrlInput" placeholder="Dán link YouTube hoặc Shorts vào đây..." class="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400">
       <button onclick="loadCustomVideo()" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-sm hover:opacity-90 transition">Phát Video</button>
     </div>
 
-    <!-- Màn hình phát video tỷ lệ chuẩn 16:9 -->
     <div class="glass p-3 rounded-3xl max-w-3xl mx-auto border border-white/15 shadow-2xl">
       <div class="relative w-full overflow-hidden rounded-2xl bg-black" style="padding-top: 56.25%;">
         <iframe id="mainYtPlayer" class="absolute top-0 left-0 w-full h-full border-0" 
@@ -78,7 +73,7 @@
     </div>
   </section>
 
-  <!-- KHU VỰC 2: BỘ SƯU TẬP HÌNH ẢNH NGHỆ THUẬT -->
+  <!-- Bộ sưu tập ảnh nghệ thuật -->
   <section id="thu-vien-anh" class="max-w-6xl mx-auto px-6 py-12 relative z-10">
     <div class="text-center mb-10">
       <div class="inline-block px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase mb-2">Thông Điệp Chuyển Hóa</div>
@@ -86,45 +81,57 @@
       <p class="text-slate-400 text-sm mt-1">Những bức họa tâm hồn chuyển tải triết lý Thân - Tâm - Trí</p>
     </div>
 
-    <!-- Lưới hiển thị 6 bức ảnh dọc chuẩn 9:16 -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/Tat-Ca-Hinh-Anh-Trinh-An 01.jpg')">
-        <img src="images/Tat-Ca-Hinh-Anh-Trinh-An 01.jpg" alt="Trịnh An 01" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-01.jpg')">
+        <img src="images/anh-01.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
         <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
         </div>
       </div>
-
-      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/Tat-Ca-Hinh-Anh-Trinh-An 02.jpg')">
-        <img src="images/Tat-Ca-Hinh-Anh-Trinh-An 02.jpg" alt="Trịnh An 02" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-02.jpg')">
+        <img src="images/anh-02.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
         <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
         </div>
       </div>
-
-      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/Tat-Ca-Hinh-Anh-Trinh-An 03.jpg')">
-        <img src="images/Tat-Ca-Hinh-Anh-Trinh-An 03.jpg" alt="Trịnh An 03" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-03.jpg')">
+        <img src="images/anh-03.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
         <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
         </div>
       </div>
-
-      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/Tat-Ca-Hinh-Anh-Trinh-An 04.jpg')">
-        <img src="images/Tat-Ca-Hinh-Anh-Trinh-An 04.jpg" alt="Trịnh An 04" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-04.jpg')">
+        <img src="images/anh-04.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
         <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
         </div>
       </div>
-
-      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/Tat-Ca-Hinh-Anh-Trinh-An 08.jpg')">
-        <img src="images/Tat-Ca-Hinh-Anh-Trinh-An 08.jpg" alt="Trịnh An 08" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-05.jpg')">
+        <img src="images/anh-05.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
         <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
         </div>
       </div>
-
-      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/Tat-Ca-Hinh-Anh-Trinh-An 09.jpg')">
-        <img src="images/Tat-Ca-Hinh-Anh-Trinh-An 09.jpg" alt="Trịnh An 09" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-06.jpg')">
+        <img src="images/anh-06.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+        <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-07.jpg')">
+        <img src="images/anh-07.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+        <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-08.jpg')">
+        <img src="images/anh-08.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+        <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl overflow-hidden aspect-[9/16] cursor-pointer group relative shadow-lg" onclick="openModal('images/anh-09.jpg')">
+        <img src="images/anh-09.jpg" alt="Trịnh An" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
         <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <span class="text-white text-xs px-3 py-1.5 rounded-full glass">Phóng to</span>
         </div>
@@ -162,7 +169,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="max-w-5xl mx-auto px-6 py-8 border-t border-slate-800 text-center text-xs text-slate-500 relative z-10">
     <p>© 2026 Trịnh An Chia Sẻ | trinhan.life</p>
   </footer>
