@@ -1021,6 +1021,10 @@ window.AnNhienCMS = (function () {
               <input type="file" id="cms-import-file" accept=".json" class="hidden" onchange="window.AnNhienCMS.handleFileRestore(event)">
             </label>
 
+            <a href="huong-dan-chuyen-giao-github.html" target="_blank" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold flex items-center gap-2 shadow">
+              <span>📖 Cẩm Nang Nhân Bản & Quản Trị AI (HTML)</span>
+            </a>
+
             <button onclick="window.AnNhienCMS.resetToFactory()" class="px-4 py-2.5 rounded-xl border border-red-300 dark:border-red-900 text-red-600 hover:bg-red-50 text-xs font-bold">
               ⚠️ Khôi phục về dữ liệu gốc
             </button>
