@@ -32,7 +32,7 @@ const DEFAULT_BRAND = {
   phone: "0834 133 344",
   zalo: "https://zalo.me/0834133344",
   email: "lienhe@trinhan.life",
-  youtube: "https://www.youtube.com/@AnNhienAIMusic",
+  youtube: "https://youtube.com/@annhienaimusictta?si=kunA1o6RMYIhoEnd",
   youtubeChannelName: "An Nhiên AI Music",
   facebook: "https://facebook.com",
   adminPin: "1979",
@@ -575,8 +575,11 @@ window.AnNhienData = {
       if (parsed.phone === '0912 345 678' || !parsed.phone) {
         parsed.phone = DEFAULT_BRAND.phone;
         parsed.zalo = DEFAULT_BRAND.zalo;
-        localStorage.setItem(STORAGE_KEYS.BRAND, JSON.stringify(parsed));
       }
+      if (!parsed.youtube || parsed.youtube.includes('@AnNhienAIMusic')) {
+        parsed.youtube = DEFAULT_BRAND.youtube;
+      }
+      localStorage.setItem(STORAGE_KEYS.BRAND, JSON.stringify(parsed));
       return { ...DEFAULT_BRAND, ...parsed };
     } catch {
       return DEFAULT_BRAND;

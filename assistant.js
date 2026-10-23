@@ -106,7 +106,7 @@ Quý anh chị chỉ cần bấm nút **"Sao chép" (1-Click)** là có thể d�
     }
 
     if (text.includes('youtube') || text.includes('nhạc') || text.includes('video') || text.includes('mv')) {
-      return `Dạ, Quý anh chị có thể thưởng thức các tác phẩm âm nhạc thiền và video hướng dẫn tại mục **Âm Nhạc & Video AI**, hoặc bấm vào link để ghé thăm kênh chính thức **An Nhiên AI Music** trên YouTube ạ! Ngoài ra, Quý anh chị có thể bấm nút **"Nhạc Thiền"** ở góc màn hình để vừa nghe nhạc vừa đọc bài viết rất thư thái ạ.`;
+      return `Dạ, Quý anh chị có thể thưởng thức các tác phẩm âm nhạc thiền và video hướng dẫn tại mục **Âm Nhạc & Video AI**, hoặc bấm vào link để ghé thăm kênh chính thức **[An Nhiên AI Music](https://youtube.com/@annhienaimusictta?si=kunA1o6RMYIhoEnd)** trên YouTube ạ! Ngoài ra, Quý anh chị có thể bấm nút **"Nhạc Thiền"** ở góc màn hình để vừa nghe nhạc vừa đọc bài viết rất thư thái ạ.`;
     }
 
     if (text.includes('liên hệ') || text.includes('số điện thoại') || text.includes('sđt') || text.includes('zalo') || text.includes('hotline')) {
