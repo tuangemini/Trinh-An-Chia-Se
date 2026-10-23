@@ -63,3 +63,13 @@ Website **TrinhAn.Life** được xây dựng nhằm định vị thương hiệ
   git push origin main
   ```
 - Website sẽ tự động cập nhật trực tiếp tại `https://trinhan.life` trong vòng 1-2 phút!
+
+---
+
+## 📖 CẨM NANG TOÀN TẬP: TẠO WEBSITE, QUẢN TRỊ & CHUYỂN GIAO (5 MODULES DÀNH CHO NGƯỜI MỚI)
+
+Để người mới bắt đầu hoàn toàn có thể tự mình tạo website trên GitHub, quản trị và chuyển giao dự án dễ dàng, vui lòng tham khảo cẩm nang chi tiết:
+
+- 🌐 **Bản giao diện Web trực quan (Có thể in ra file PDF):** [huong-dan-chuyen-giao-github.html](huong-dan-chuyen-giao-github.html) hoặc xem online tại [https://trinhan.life/huong-dan-chuyen-giao-github.html](https://trinhan.life/huong-dan-chuyen-giao-github.html)
+- 📄 **Bản tài liệu Markdown đầy đủ:** [HUONG-DAN-TONG-THE.md](HUONG-DAN-TONG-THE.md)
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cẩm Nang Toàn Tập: Hướng Dẫn Chuyển Dữ Liệu Lên GitHub & Quản Trị Website Tự Động Bằng AI</title>
+  <title>Cẩm Nang Toàn Tập: Hướng Dẫn Tạo, Quản Trị & Chuyển Giao Website Trên GitHub</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,485 +36,572 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .step-card {
-      transition: all 0.3s ease;
+    .module-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .step-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 30px -10px rgba(15, 23, 42, 0.08);
+    .module-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.1);
     }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-10 px-4 sm:px-6 lg:px-8 selection:bg-amber-300 selection:text-slate-900">
 
   <!-- TOP BANNER & HEADER -->
-  <div class="max-w-4xl mx-auto space-y-8">
+  <div class="max-w-4xl mx-auto space-y-10">
     
-    <!-- Top Card -->
+    <!-- Top Hero Header -->
     <div class="rounded-3xl bg-gradient-to-r from-slate-950 via-blue-950 to-teal-950 text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden border border-white/10">
-      <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"></div>
       
       <div class="relative z-10 space-y-4">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 text-xs font-black uppercase tracking-wider">
-          <span>✨ DÀNH CHO NGƯỜI MỚI – CẦM TAY CHỈ VIỆC A ĐẾN Z</span>
+          <span>🌟 GIÁO TRÌNH TOÀN TẬP PHÂN THEO MODULE THỰC CHIẾN</span>
         </div>
         
         <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black leading-tight">
-          Cẩm Nang Toàn Tập: <br>
-          <span class="gold-gradient">Chuyển Dữ Liệu Lên GitHub</span> <br>
-          & Tự Quản Trị Website Dễ Dàng Bằng AI
+          Cẩm Nang Tổng Thể: <br>
+          <span class="gold-gradient">Tạo Website Trên GitHub</span>, <br>
+          Quản Trị Tự Động & Chuyển Giao Trọn Gói
         </h1>
 
         <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-          Tài liệu chuẩn hóa giúp người không chuyên công nghệ vẫn có thể <strong>chủ động chuyển giao, đưa toàn bộ website lên GitHub của riêng mình</strong>, xuất bản trang web online và tự quản trị trọn đời mà không cần thuê lập trình viên!
+          Được biên soạn bằng ngôn ngữ mộc mạc, trực quan nhất cho <strong>người mới bắt đầu hoàn toàn</strong>. Giáo trình chia thành <strong>5 Module tương ứng với từng giai đoạn</strong>, giúp bạn biết chính xác mình đang ở bước nào và chỉ cần bấm vào để áp dụng được ngay!
         </p>
 
         <!-- Quick Summary Metrics -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-white/15 text-center">
           <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
+            <span class="block text-xl font-black text-emerald-400">0 Đồng</span>
+            <span class="text-[11px] text-slate-300 font-semibold">Hosting GitHub vĩnh viễn</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
             <span class="block text-xl font-black text-amber-400">100%</span>
-            <span class="text-[11px] text-slate-300 font-semibold">Sở hữu chính chủ</span>
+            <span class="text-[11px] text-slate-300 font-semibold">Sở hữu mã nguồn chính chủ</span>
           </div>
           <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-            <span class="block text-xl font-black text-teal-400">0 Đồng</span>
-            <span class="text-[11px] text-slate-300 font-semibold">Hosting miễn phí</span>
+            <span class="block text-xl font-black text-blue-400">5 Phút</span>
+            <span class="text-[11px] text-slate-300 font-semibold">Nhân bản & phát sóng web</span>
           </div>
           <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-            <span class="block text-xl font-black text-blue-400">Đa Giải Pháp</span>
-            <span class="text-[11px] text-slate-300 font-semibold">Kéo thả / Fork / Phím tắt</span>
-          </div>
-          <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-            <span class="block text-xl font-black text-emerald-400">Tự Động</span>
-            <span class="text-[11px] text-slate-300 font-semibold">AI quản trị 24/7</span>
+            <span class="block text-xl font-black text-purple-400">Không Cần Code</span>
+            <span class="text-[11px] text-slate-300 font-semibold">AI & CMS quản trị tự động</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- MỤC LỤC NHANH -->
+    <!-- BỘ ĐỊNH VỊ BẢN THÂN: BẠN ĐANG Ở GIAI ĐOẠN NÀO? -->
     <div class="rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-      <h2 class="text-lg font-black text-slate-900 flex items-center gap-2">
-        <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-sm font-black">📑</span>
-        Nội Dung Cẩm Nang Này Bao Gồm:
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-slate-700">
-        <a href="#phan-1" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-amber-50 hover:border-amber-300 border border-slate-200 transition flex items-center gap-2">
-          <span class="text-amber-600 font-black">Phần 1:</span>
-          <span>4 Giải pháp chuyển code lên GitHub (Chọn cách phù hợp)</span>
-        </a>
-        <a href="#phan-2" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-blue-50 hover:border-blue-300 border border-slate-200 transition flex items-center gap-2">
-          <span class="text-blue-600 font-black">Phần 2:</span>
-          <span>Cách xuất bản website lên mạng (GitHub Pages)</span>
-        </a>
-        <a href="#phan-3" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-teal-50 hover:border-teal-300 border border-slate-200 transition flex items-center gap-2">
-          <span class="text-teal-600 font-black">Phần 3:</span>
-          <span>Cấu hình Tên miền riêng (Domain) hoặc tên miền miễn phí</span>
-        </a>
-        <a href="#phan-4" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 hover:border-purple-300 border border-slate-200 transition flex items-center gap-2">
-          <span class="text-purple-600 font-black">Phần 4:</span>
-          <span>3 Cách tự quản trị web dễ dàng sau này (AI & CMS)</span>
-        </a>
-        <a href="#phan-5" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-rose-50 hover:border-rose-300 border border-slate-200 transition sm:col-span-2 flex items-center gap-2">
-          <span class="text-rose-600 font-black">Phần 5:</span>
-          <span>Sổ tay xử lý sự cố thường gặp (Kéo nhầm folder con, web 404,...)</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- ================= PHẦN 1: 4 GIẢI PHÁP CHUYỂN DỮ LIỆU LÊN GITHUB ================= -->
-    <div id="phan-1" class="space-y-6">
-      <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-xs font-black uppercase tracking-widest text-amber-600">Phần 1 • Đưa Dữ Liệu Lên GitHub</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950">
-          4 Giải Pháp Chuyển Code Sang GitHub Mới
+      <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
+        <h2 class="text-lg font-black text-slate-900 flex items-center gap-2">
+          <span>🎯</span> BẠN ĐANG Ở ĐÂU? (BẤM ĐỂ CHUYỂN NHANH ĐẾN MODULE CỦA BẠN):
         </h2>
-        <p class="text-xs sm:text-sm text-slate-500">
-          Tùy theo sự thuận tiện, bạn có thể chọn 1 trong 4 cách dưới đây:
-        </p>
+        <span class="text-[11px] font-bold text-slate-400 hidden sm:inline">Tự định vị giai đoạn</span>
       </div>
 
-      <!-- GIẢI PHÁP 1: FORK (NHANH NHẤT TRÊN GITHUB) -->
-      <div class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-        <div class="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
-          <div class="flex items-center gap-3">
-            <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-black uppercase">Giải Pháp 1</span>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">Bấm nút "Fork" (Nhân bản 1-Click trên Web)</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        
+        <a href="#module-1" class="p-4 rounded-2xl bg-emerald-50/70 hover:bg-emerald-100/70 border border-emerald-200 transition group flex flex-col justify-between space-y-2">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-200 text-emerald-900">Giai đoạn 1 • Mới bắt đầu</span>
+            <h3 class="text-sm font-black text-slate-900 group-hover:text-emerald-800 mt-1.5">Tôi là người mới tinh, chưa có tài khoản GitHub</h3>
           </div>
-          <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">★ Khuyên Dùng Nhất</span>
-        </div>
-        <p class="text-xs sm:text-sm text-slate-600">
-          <strong>Khi nào dùng:</strong> Khi bạn muốn sao chép toàn bộ website từ kho gốc của người khác sang tài khoản của mình mà không cần tải bất cứ file nào về máy.
-        </p>
-        <div class="space-y-2.5 text-xs text-slate-700 bg-slate-50 p-4 rounded-2xl border border-slate-200">
-          <p><strong>Bước 1:</strong> Đăng nhập tài khoản GitHub mới của bạn.</p>
-          <p><strong>Bước 2:</strong> Mở link dự án gốc: 
-            <a href="https://github.com/tuangemini/Trinh-An-Chia-Se" target="_blank" class="text-blue-600 font-bold underline">https://github.com/tuangemini/Trinh-An-Chia-Se</a>
-          </p>
-          <p><strong>Bước 3:</strong> Nhìn lên góc trên cùng bên phải màn hình, bấm vào nút <strong>🍴 Fork</strong>.</p>
-          <p><strong>Bước 4:</strong> Bấm nút xanh <strong>"Create fork"</strong>. Trong 3 giây, toàn bộ trang web đã sang tài khoản của bạn chuẩn 100%!</p>
-        </div>
-      </div>
+          <span class="text-xs font-bold text-emerald-700 flex items-center gap-1">Vào Module 1 →</span>
+        </a>
 
-      <!-- GIẢI PHÁP 2: KÉO THẢ CHUẨN XÁC TỪ MÁY TÍNH -->
-      <div class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-        <div class="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
-          <div class="flex items-center gap-3">
-            <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-black uppercase">Giải Pháp 2</span>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">Kéo Thả Trực Tiếp Từ Máy Tính (Upload Files)</h3>
+        <a href="#module-2" class="p-4 rounded-2xl bg-blue-50/70 hover:bg-blue-100/70 border border-blue-200 transition group flex flex-col justify-between space-y-2">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-blue-200 text-blue-900">Giai đoạn 2 • Xuất bản</span>
+            <h3 class="text-sm font-black text-slate-900 group-hover:text-blue-800 mt-1.5">Tôi đã có GitHub, muốn đưa web lên Internet</h3>
           </div>
-          <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full">Dễ Hiểu</span>
-        </div>
-        <p class="text-xs sm:text-sm text-slate-600">
-          <strong>Khi nào dùng:</strong> Khi bạn tạo một kho mới tinh (New Repository) và muốn tải file từ máy tính lên.
-        </p>
-        <div class="space-y-2.5 text-xs text-slate-700 bg-amber-50/50 p-4 rounded-2xl border border-amber-200">
-          <p class="text-red-600 font-bold">
-            ⚠️ NGUYÊN TẮC VÀNG: Không bao giờ kéo cả thư mục cha bên ngoài!
-          </p>
-          <p><strong>Bước 1:</strong> Mở thư mục dự án trên máy tính ra (ví dụ mở bên trong thư mục <code>Trinh-An-Chia-Se</code>).</p>
-          <p><strong>Bước 2:</strong> Nhấn tổ hợp phím <strong><code>Ctrl + A</code></strong> để bôi đen toàn bộ các file bên trong: <code>index.html</code>, <code>data.js</code>, <code>admin.js</code>, thư mục <code>images</code>,...</p>
-          <p><strong>Bước 3:</strong> Trên trang GitHub của bạn, bấm <strong>Add file ▾</strong> -> Chọn <strong>Upload files</strong>.</p>
-          <p><strong>Bước 4:</strong> Kéo các file đã chọn thả vào khung vuông trên trình duyệt -> Kéo xuống dưới bấm nút xanh <strong>Commit changes</strong>.</p>
-        </div>
-      </div>
+          <span class="text-xs font-bold text-blue-700 flex items-center gap-1">Vào Module 2 →</span>
+        </a>
 
-      <!-- GIẢI PHÁP 3: DÙNG PHÍM TẮT DẤU CHẤM (.) ĐỂ CUT/MOVE FILE -->
-      <div class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-        <div class="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
-          <div class="flex items-center gap-3">
-            <span class="px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-black uppercase">Giải Pháp 3</span>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">Dùng Phím Tắt "." Để Cut / Chuyển File Trực Tiếp Trên Web</h3>
+        <a href="#module-3" class="p-4 rounded-2xl bg-purple-50/70 hover:bg-purple-100/70 border border-purple-200 transition group flex flex-col justify-between space-y-2">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-purple-200 text-purple-900">Giai đoạn 3 • Vận hành</span>
+            <h3 class="text-sm font-black text-slate-900 group-hover:text-purple-800 mt-1.5">Web đã chạy, tôi muốn đăng bài, sửa ảnh, đổi số ĐT</h3>
           </div>
-          <span class="text-[11px] font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full border border-teal-200">Không Cần Upload Lại</span>
-        </div>
-        <p class="text-xs sm:text-sm text-slate-600">
-          <strong>Khi nào dùng:</strong> Khi bạn lỡ kéo cả thư mục cha lên GitHub khiến tất cả file bị lọt vào thư mục con (như trường hợp <code>Test-TrinhAn/Trinh-An-Chia-Se/...</code>).
-        </p>
-        <div class="space-y-2.5 text-xs text-slate-700 bg-teal-50/40 p-4 rounded-2xl border border-teal-200">
-          <p><strong>Bước 1:</strong> Tại trang chính của kho lưu trữ trên GitHub, nhấn phím <strong>dấu chấm <code>.</code></strong> trên bàn phím (màn hình sẽ mở trình biên soạn trực quan VS Code for Web).</p>
-          <p><strong>Bước 2:</strong> Ở danh sách bên trái, mở thư mục con ra, giữ phím <code>Shift</code> chọn các file (hoặc kéo từng file như <code>index.html</code>, <code>data.js</code>, thư mục <code>images</code>) kéo thả lên dòng chữ tên kho trên cùng (thư mục gốc).</p>
-          <p><strong>Bước 3:</strong> Chuột phải vào thư mục cũ rỗng -> Chọn <strong>Delete</strong> để xóa.</p>
-          <p><strong>Bước 4:</strong> Nhìn sang thanh biểu tượng ngoài cùng bên trái, bấm vào biểu tượng <strong>Source Control (hình nhánh cây)</strong> -> Gõ chữ <code>Chuyen file ra ngoai</code> -> Bấm nút tích xanh <strong>Commit & Push</strong>.</p>
-        </div>
-      </div>
+          <span class="text-xs font-bold text-purple-700 flex items-center gap-1">Vào Module 3 →</span>
+        </a>
 
-      <!-- GIẢI PHÁP 4: DÙNG LỆNH GIT TỪ MÁY TÍNH -->
-      <div class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-        <div class="flex items-center justify-between gap-2 border-b border-slate-100 pb-3">
-          <div class="flex items-center gap-3">
-            <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-black uppercase">Giải Pháp 4</span>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">Đẩy Bằng Lệnh Git Từ Máy Tính (3 Giây Là Xong)</h3>
+        <a href="#module-4" class="p-4 rounded-2xl bg-amber-50/70 hover:bg-amber-100/70 border border-amber-200 transition group flex flex-col justify-between space-y-2">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-amber-200 text-amber-900">Giai đoạn 4 • Chuyển giao</span>
+            <h3 class="text-sm font-black text-slate-900 group-hover:text-amber-800 mt-1.5">Tôi muốn nhân bản, bàn giao web cho người khác</h3>
           </div>
-          <span class="text-[11px] font-bold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-full">Chính Xác Tuyệt Đối</span>
-        </div>
-        <p class="text-xs sm:text-sm text-slate-600">
-          <strong>Khi nào dùng:</strong> Khi máy tính của bạn đã có sẵn thư mục code chuẩn và bạn muốn đẩy đè ngay lập tức lên kho GitHub mới.
-        </p>
-        <div class="space-y-2.5 text-xs text-slate-700 bg-purple-50/40 p-4 rounded-2xl border border-purple-200">
-          <p>Mở cửa sổ dòng lệnh (Terminal / PowerShell) ngay tại thư mục website trên máy tính và copy chạy lệnh sau:</p>
-          
-          <div class="p-3 rounded-xl bg-slate-900 text-slate-200 code-font flex items-center justify-between gap-2">
-            <span class="truncate" id="cmd-git-push">git remote set-url origin https://github.com/TÊN_GITHUB/TÊN_KHO.git & git push -u origin main --force</span>
-            <button onclick="copyBox('cmd-git-push')" class="px-3 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold uppercase text-[10px] shrink-0">Sao Chép</button>
-          </div>
-          <p class="text-slate-500 italic">*(Thay TÊN_GITHUB và TÊN_KHO bằng thông tin tài khoản của bạn)*</p>
-        </div>
-      </div>
+          <span class="text-xs font-bold text-amber-700 flex items-center gap-1">Vào Module 4 →</span>
+        </a>
 
+        <a href="#module-5" class="p-4 rounded-2xl bg-rose-50/70 hover:bg-rose-100/70 border border-rose-200 transition group flex flex-col justify-between space-y-2 sm:col-span-2 lg:col-span-2">
+          <div>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-rose-200 text-rose-900">Cứu hộ khẩn cấp • FAQ</span>
+            <h3 class="text-sm font-black text-slate-900 group-hover:text-rose-800 mt-1.5">Tôi đang gặp trục trặc (lỗi 404, kéo nhầm folder con, sửa mà web chưa đổi,...)</h3>
+          </div>
+          <span class="text-xs font-bold text-rose-700 flex items-center gap-1">Vào Module 5 (Sửa lỗi trong 1 phút) →</span>
+        </a>
+
+      </div>
     </div>
 
-    <!-- ================= PHẦN 2: XUẤT BẢN WEBSITE (GITHUB PAGES) ================= -->
-    <div id="phan-2" class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
-      <div class="flex items-start gap-4">
-        <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white font-black text-xl flex items-center justify-center shrink-0 shadow-md shadow-teal-600/20">
-          02
+    <!-- ================= MODULE 1 ================= -->
+    <div id="module-1" class="module-card rounded-3xl bg-white p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8">
+      
+      <div class="flex items-start gap-4 border-b border-slate-100 pb-6">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white font-black text-2xl flex items-center justify-center shrink-0 shadow-lg shadow-emerald-600/30">
+          01
         </div>
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Phần 2 • Xuất Bản Online</span>
-          <h2 class="text-xl sm:text-2xl font-black text-slate-950">
-            Bật Tính Năng GitHub Pages Để Trang Web Hoạt Động
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-extrabold uppercase tracking-wider mb-1">
+            <span>🟢 MODULE 1 • DÀNH CHO NGƯỜI MỚI BẮT ĐẦU HOÀN TOÀN</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-950">
+            Tạo Tài Khoản & Sở Hữu "Sổ Đỏ Trực Tuyến" GitHub
           </h2>
           <p class="text-xs sm:text-sm text-slate-500 mt-1">
-            Chỉ với vài click chuột, website của bạn sẽ phát sóng trực tuyến miễn phí trọn đời!
+            Thời gian hoàn thành: ~3 phút • Không cần biết kỹ thuật lập trình
           </p>
         </div>
       </div>
 
-      <div class="space-y-4 text-xs sm:text-sm text-slate-700">
-        <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-          <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0">1</span>
-          <p>
-            Tại kho lưu trữ của bạn, bấm vào thẻ <strong>⚙️ Settings</strong> (nằm ở thanh menu ngang phía trên cùng).
-          </p>
+      <!-- Khái niệm đơn giản -->
+      <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3">
+        <h3 class="text-sm font-black text-amber-400 flex items-center gap-2">
+          <span>💡</span> Hiểu Đúng & Đơn Giản Về GitHub (Không Lo Sợ Kỹ Thuật):
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Nhiều người nghĩ GitHub là thứ gì đó cao siêu của dân công nghệ. Nhưng thực ra, bạn chỉ cần hiểu:
+          <br>• <strong>GitHub</strong> giống như một <strong>"Két sắt an toàn & Sổ đỏ trực tuyến"</strong> do tập đoàn Microsoft sở hữu. Toàn bộ hình ảnh, bài viết, mã nguồn trang web của bạn được cất giữ ở đây trọn đời, không bao giờ bị hack hay mất mát.
+          <br>• <strong>GitHub Pages</strong> là tính năng phát sóng miễn phí đi kèm: Giúp bạn biến các file lưu trong két sắt đó thành một trang web sống động trên mạng Internet với chi phí duy trì <strong>0 đồng</strong>.
+        </p>
+      </div>
+
+      <!-- Các bước tạo tài khoản -->
+      <div class="space-y-4">
+        <h3 class="text-base font-black text-slate-900">3 Bước Đăng Ký Tài Khoản GitHub Miễn Phí:</h3>
+
+        <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0">1</span>
+          <div class="space-y-2 flex-1 text-xs sm:text-sm text-slate-700">
+            <p>Mở trình duyệt web và truy cập vào đường link đăng ký chính thức của GitHub:</p>
+            <div class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900 text-slate-200 code-font text-xs">
+              <span class="flex-1 truncate select-all" id="link-signup">https://github.com/signup</span>
+              <button onclick="copyBox('link-signup')" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider shrink-0">
+                Sao Chép Link
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-          <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0">2</span>
-          <p>
-            Nhìn sang cột menu bên trái, tìm và bấm vào mục <strong>📄 Pages</strong>.
-          </p>
-        </div>
-
-        <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-          <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0">3</span>
-          <div class="space-y-2 flex-1">
-            <p>Tại mục <strong>Build and deployment</strong>:</p>
-            <ul class="space-y-1.5 list-disc ml-5 text-slate-600">
-              <li>Ô <strong>Branch</strong> (mặc định đang là <code class="bg-slate-200 px-1 py-0.5 rounded font-bold text-red-600">None ▾</code>): Bấm vào và chọn chữ <strong>main</strong>.</li>
-              <li>Ô thư mục bên cạnh: Giữ nguyên <strong>/(root)</strong>.</li>
-              <li>Bấm nút <strong>Save</strong> (Lưu).</li>
+        <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0">2</span>
+          <div class="space-y-1.5 text-xs sm:text-sm text-slate-700">
+            <p><strong>Điền 3 thông tin cơ bản:</strong></p>
+            <ul class="list-disc ml-5 space-y-1 text-slate-600">
+              <li><strong>Email:</strong> Nhập địa chỉ Gmail bạn đang dùng hàng ngày.</li>
+              <li><strong>Password (Mật khẩu):</strong> Tạo mật khẩu gồm ít nhất 8 ký tự (có chữ và số).</li>
+              <li><strong>Username (Tên người dùng):</strong> Đặt tên thương hiệu của bạn viết liền không dấu (ví dụ: <code class="bg-amber-100 text-amber-900 px-1 py-0.5 rounded font-bold">annhienai</code> hoặc <code class="bg-amber-100 text-amber-900 px-1 py-0.5 rounded font-bold">trinh-an</code>). Tên này sau này sẽ là một phần đường link website miễn phí của bạn!</li>
             </ul>
           </div>
         </div>
-      </div>
 
-      <!-- Visual Settings Mockup -->
-      <div class="p-4 rounded-2xl bg-slate-950 text-white border border-slate-800 space-y-2">
-        <div class="text-xs font-bold text-teal-400 flex items-center gap-1.5">
-          <span>🖼️ Minh Họa Màn Hình Settings -> Pages:</span>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-900 text-xs space-y-2 font-mono">
-          <div class="text-slate-400">Branch: [ main ▼ ]  Folder: [ /(root) ▼ ]  <span class="bg-blue-600 text-white px-2.5 py-1 rounded font-bold">Save</span></div>
-          <div class="text-emerald-400 font-bold pt-2 border-t border-slate-800">
-            ✓ Your site is live at: <span class="text-amber-300 underline">https://tên-bạn.github.io/tên-kho/</span>
+        <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0">3</span>
+          <div class="space-y-1 text-xs sm:text-sm text-slate-700">
+            <p><strong>Xác thực Email:</strong></p>
+            <p class="text-slate-600">Mở hòm thư Gmail của bạn, lấy <strong>mã số 6 chữ số</strong> mà GitHub vừa gửi và gõ vào màn hình. Bạn đã có ngay một tài khoản GitHub chính chủ sẵn sàng làm website!</p>
           </div>
         </div>
-        <p class="text-[11px] text-slate-400 italic">
-          *(Đợi khoảng 1 đến 2 phút sau khi bấm Save, nhấn F5 tải lại trang sẽ thấy đường link web màu xanh xuất hiện trên đỉnh)*
-        </p>
       </div>
+
     </div>
 
-    <!-- ================= PHẦN 3: CẤU HÌNH TÊN MIỀN ================= -->
-    <div id="phan-3" class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
-      <div class="flex items-start gap-4">
-        <div class="w-12 h-12 rounded-2xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
+    <!-- ================= MODULE 2 ================= -->
+    <div id="module-2" class="module-card rounded-3xl bg-white p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8">
+      
+      <div class="flex items-start gap-4 border-b border-slate-100 pb-6">
+        <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white font-black text-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-600/30">
+          02
+        </div>
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-extrabold uppercase tracking-wider mb-1">
+            <span>🔵 MODULE 2 • XUẤT BẢN WEBSITE LÊN MẠNG</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-950">
+            Đưa Dữ Liệu Lên GitHub & Phát Sóng Trang Web Online
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Thời gian hoàn thành: ~5 phút • Có thể dùng con đường 1-click hoặc tải từ máy tính
+          </p>
+        </div>
+      </div>
+
+      <!-- Bài 2.1: Chọn con đường -->
+      <div class="space-y-4">
+        <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+          <span>🛣️</span> Bài 2.1: Chọn 1 Trong 2 Cách Đưa Code Sang Tài Khoản Của Bạn:
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- Cách A: Fork -->
+          <div class="p-5 rounded-2xl bg-blue-50/70 border-2 border-blue-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-blue-600 text-white">Cách A • Khuyên Dùng Nhất</span>
+              <h4 class="font-extrabold text-sm text-slate-900">Bấm Nút "Fork" (Nhân bản 1-Click trên Web)</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Không cần tải file về máy tính! Bạn chỉ cần vào link gốc của Tuấn và bấm 1 nút là toàn bộ web được chép sang GitHub của bạn:
+              </p>
+              <div class="p-2.5 rounded-xl bg-slate-900 text-slate-200 code-font text-xs flex items-center justify-between gap-1">
+                <span class="truncate" id="link-fork">https://github.com/tuangemini/Trinh-An-Chia-Se</span>
+                <button onclick="copyBox('link-fork')" class="px-2.5 py-1 rounded bg-amber-500 text-slate-950 font-bold uppercase text-[10px] shrink-0">Copy</button>
+              </div>
+              <p class="text-xs text-slate-700">
+                👉 Nhìn góc trên bên phải, bấm vào nút <strong>🍴 Fork</strong> -> bấm nút xanh <strong>"Create fork"</strong>. Xong ngay trong 3 giây!
+              </p>
+            </div>
+            <span class="text-[11px] font-bold text-blue-700">✓ Nhanh nhất, không lo lỗi nhầm thư mục con</span>
+          </div>
+
+          <!-- Cách B: Kéo thả từ máy tính -->
+          <div class="p-5 rounded-2xl bg-amber-50/70 border-2 border-amber-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-amber-600 text-white">Cách B • Tự Kéo Thả</span>
+              <h4 class="font-extrabold text-sm text-slate-900">Kéo Thả Các File Từ Máy Tính Lên Kho Mới</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Dành cho khi bạn bấm <strong>New repository</strong> để tạo kho mới và muốn tải file từ máy lên:
+              </p>
+              <div class="p-3 rounded-xl bg-amber-100/70 border border-amber-300 text-amber-950 text-xs space-y-1">
+                <p class="font-bold text-red-600">⚠️ NGUYÊN TẮC VÀNG TRÁNH LỖI:</p>
+                <p>Hãy <strong>mở hẳn bên trong thư mục</strong> trên máy ra, nhấn <strong>Ctrl + A</strong> để bôi đen tất cả file bên trong (index.html, data.js, thư mục images,...) rồi kéo thả vào GitHub. Tuyệt đối không kéo cả thư mục cha bên ngoài!</p>
+              </div>
+            </div>
+            <span class="text-[11px] font-bold text-amber-800">✓ Chủ động đưa bất kỳ phiên bản nào trên máy lên</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bài 2.2: Bật GitHub Pages -->
+      <div class="space-y-4 pt-4 border-t border-slate-100">
+        <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+          <span>🚀</span> Bài 2.2: Kích Hoạt Xuất Bản Website (GitHub Pages):
+        </h3>
+        
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm text-slate-700">
+          <p>Tại trang kho lưu trữ của bạn trên GitHub, thực hiện đúng 3 bước nhấp chuột:</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <span class="font-black text-blue-600 block">Bước 1: Vào Cài Đặt</span>
+              <p>Bấm vào thẻ <strong>⚙️ Settings</strong> ở thanh menu trên cùng.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <span class="font-black text-blue-600 block">Bước 2: Mở Mục Pages</span>
+              <p>Ở cột menu bên trái, tìm và bấm vào chữ <strong>📄 Pages</strong>.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <span class="font-black text-blue-600 block">Bước 3: Chọn Nhánh & Lưu</span>
+              <p>Tại <em>Branch</em>: chọn <strong>main</strong>, thư mục giữ <strong>/(root)</strong> -> Bấm <strong>Save</strong>.</p>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-500 italic">
+            * Sau khi bấm Save, đợi khoảng 1 đến 2 phút rồi nhấn <strong>F5</strong> tải lại trang, bạn sẽ thấy đường link web màu xanh xuất hiện trên đỉnh!
+          </p>
+        </div>
+      </div>
+
+      <!-- Bài 2.3: Xử lý Tên Miền -->
+      <div class="space-y-3 pt-4 border-t border-slate-100">
+        <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+          <span>🌐</span> Bài 2.3: Cấu Hình Tên Miền Website (File CNAME):
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-4 rounded-xl bg-slate-900 text-white space-y-1.5">
+            <h4 class="font-bold text-amber-400">Nếu bạn muốn dùng link MIỄN PHÍ của GitHub:</h4>
+            <p class="text-slate-300">Link có dạng: <code>https://tên-bạn.github.io/tên-kho/</code></p>
+            <p class="text-emerald-400 font-bold">👉 Việc cần làm: Bấm vào file có tên <code>CNAME</code> trên GitHub -> Bấm icon thùng rác để XÓA file này đi!</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900 text-white space-y-1.5">
+            <h4 class="font-bold text-teal-400">Nếu bạn dùng TÊN MIỀN RIÊNG (mua ngoài):</h4>
+            <p class="text-slate-300">Ví dụ: <code>trinhan.life</code> hoặc <code>tenban.com</code></p>
+            <p class="text-teal-300 font-bold">👉 Việc cần làm: Mở file <code>CNAME</code>, bấm icon cây bút chì ✏️ để sửa thành tên miền của bạn và trỏ DNS theo hướng dẫn.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= MODULE 3 ================= -->
+    <div id="module-3" class="module-card rounded-3xl bg-white p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8">
+      
+      <div class="flex items-start gap-4 border-b border-slate-100 pb-6">
+        <div class="w-14 h-14 rounded-2xl bg-purple-600 text-white font-black text-2xl flex items-center justify-center shrink-0 shadow-lg shadow-purple-600/30">
           03
         </div>
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Phần 3 • Tên Miền Website</span>
-          <h2 class="text-xl sm:text-2xl font-black text-slate-950">
-            Cấu Hình Tên Miền Riêng (Domain) Hoặc Dùng Đuôi Miễn Phí
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-purple-100 text-purple-800 text-[11px] font-extrabold uppercase tracking-wider mb-1">
+            <span>🟣 MODULE 3 • TỰ QUẢN TRỊ TRỌN ĐỜI</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-950">
+            Tự Cập Nhật Bài Viết, Tranh Ảnh & Đổi Thông Tin Dễ Dàng
           </h2>
           <p class="text-xs sm:text-sm text-slate-500 mt-1">
-            Hiểu rõ file CNAME để web không bị báo lỗi tên miền.
+            Không cần thuê dịch vụ quản trị • Bạn có 3 cách cực kỳ tiện lợi
           </p>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+      <!-- 3 Phương thức quản trị -->
+      <div class="space-y-6">
         
-        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-blue-950 space-y-2">
-          <span class="font-extrabold text-sm text-blue-800 flex items-center gap-1.5">
-            <span>🌐</span> Trường Hợp A: Dùng Tên Miền Riêng
-          </span>
-          <p>
-            Nếu bạn đã mua tên miền (ví dụ: <code>trinhan.life</code> hoặc <code>tenban.vn</code>):
+        <!-- Cách 1: CMS Studio -->
+        <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase text-amber-800 bg-amber-200/80 px-2.5 py-0.5 rounded-full">Cách 1 • Quản Trị Trực Tiếp Trên Web</span>
+            <span class="text-xs font-bold text-slate-500">Dễ như dùng Word</span>
+          </div>
+          <h3 class="text-base font-black text-slate-900">An Nhiên CMS Studio (Tích Hợp Sẵn Ngay Trên Website)</h3>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Ngay trên website của bạn, bất cứ lúc nào bạn cũng có thể mở Trung tâm Quản trị để thêm bài học, thêm tranh mới, đổi link video:
           </p>
-          <ul class="list-disc ml-5 space-y-1 text-slate-700">
-            <li>Mở file tên là <strong><code>CNAME</code></strong> trên GitHub.</li>
-            <li>Bấm icon cây bút chì ✏️ để sửa, gõ tên miền của bạn vào đó.</li>
-            <li>Trỏ bản ghi DNS tại nhà cung cấp tên miền về GitHub theo hướng dẫn.</li>
-          </ul>
-        </div>
-
-        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 space-y-2">
-          <span class="font-extrabold text-sm text-amber-800 flex items-center gap-1.5">
-            <span>🆓</span> Trường Hợp B: Dùng Link Miễn Phí Của GitHub
-          </span>
-          <p>
-            Nếu bạn chưa mua tên miền và muốn dùng link miễn phí dạng: <code>https://tên-bạn.github.io/tên-kho/</code>:
-          </p>
-          <ul class="list-disc ml-5 space-y-1 text-slate-700">
-            <li>Bấm vào file <strong><code>CNAME</code></strong> trên GitHub.</li>
-            <li>Bấm vào <strong>biểu tượng thùng rác (Delete)</strong> để XÓA file CNAME này đi!</li>
-            <li>GitHub sẽ tự động cấp link miễn phí chạy ngay lập tức.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ================= PHẦN 4: 3 CÁCH TỰ QUẢN TRỊ WEBSITE DỄ DÀNG ================= -->
-    <div id="phan-4" class="space-y-6">
-      <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-xs font-black uppercase tracking-widest text-purple-600">Phần 4 • Tự Quản Trị Trọn Đời</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950">
-          3 Cách Tự Quản Trị Website Dễ Dàng Sau Này
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-500">
-          Sau khi website đã lên mạng, bạn có thể tự mình cập nhật bài viết, tranh ảnh theo 3 cách:
-        </p>
-      </div>
-
-      <!-- CÁCH A: AN NHIÊN CMS STUDIO TRÊN WEB -->
-      <div class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-        <div class="flex items-center gap-3">
-          <span class="w-10 h-10 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-lg">
-            🔐
-          </span>
-          <div>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">
-              Cách A: Quản Trị Trực Tiếp Trên Giao Diện Web (An Nhiên CMS Studio)
-            </h3>
-            <p class="text-xs text-slate-500">Không cần biết code, có giao diện nhập liệu như Word</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <span class="font-bold text-amber-700 block">Bước 1: Mở Quản Trị</span>
+              <span>Bấm nút <strong>🔐 Quản Trị</strong> ở menu trên cùng (hoặc bấm phím tắt <code>Ctrl + Shift + A</code>).</span>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <span class="font-bold text-amber-700 block">Bước 2: Nhập Mã PIN</span>
+              <span>Mã PIN mặc định là: <strong class="text-amber-700 text-sm font-mono">1979</strong> (có thể đổi mã mới tùy thích).</span>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <span class="font-bold text-amber-700 block">Bước 3: Nhập Liệu & Lưu</span>
+              <span>Chọn các tab Bài viết, Kho tranh, Video để thêm mới. Dữ liệu sẽ cập nhật ngay trên trang!</span>
+            </div>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700">
-          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-            <span class="font-bold text-amber-700 block">Bước 1: Mở Bảng Quản Trị</span>
-            <p>Trên trang web, bấm vào nút <strong>🔐 Quản Trị</strong> ở góc trên thanh menu (hoặc bấm tổ hợp phím <code>Ctrl + Shift + A</code>).</p>
+        <!-- Cách 2: Ra lệnh cho AI Gemini Spark -->
+        <div class="p-5 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase text-purple-800 bg-purple-200/80 px-2.5 py-0.5 rounded-full">Cách 2 • Đỉnh Cao Công Nghệ</span>
+            <span class="text-xs font-bold text-purple-700">Tự động hóa 100%</span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-            <span class="font-bold text-amber-700 block">Bước 2: Nhập Mã PIN</span>
-            <p>Mã PIN bảo mật mặc định là: <strong class="text-amber-600 text-sm font-mono">1979</strong> (bạn có thể tự đổi mã PIN mới trong cài đặt).</p>
-          </div>
-          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-            <span class="font-bold text-amber-700 block">Bước 3: Thêm / Sửa / Xóa</span>
-            <p>Bấm chọn tab <strong>Bài Viết</strong>, <strong>Kho Tranh</strong>, <strong>Prompt</strong> hoặc <strong>Video</strong> để sửa. Dữ liệu sẽ cập nhật ngay lập tức!</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- CÁCH B: RA LỆNH CHO GEMINI SPARK TỰ LÀM -->
-      <div class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
-        <div class="flex items-center gap-3">
-          <span class="w-10 h-10 rounded-2xl bg-purple-600 text-white flex items-center justify-center font-black text-lg">
-            🤖
-          </span>
-          <div>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">
-              Cách B: Ra Lệnh Cho Trợ Lý AI (Gemini Spark) Tự Động Quản Trị
-            </h3>
-            <p class="text-xs text-slate-500">Chỉ cần nhắn tin bằng tiếng Việt là AI tự sửa web giúp bạn</p>
-          </div>
-        </div>
-
-        <div class="space-y-3 text-xs text-slate-700">
-          <p>
-            <strong>Chuẩn bị mã chìa khóa kết nối (GitHub Token):</strong><br>
-            Truy cập <a href="https://github.com/settings/tokens/new" target="_blank" class="text-purple-600 font-bold underline">https://github.com/settings/tokens/new</a> -> Đặt tên token, chọn thời hạn <em>No expiration</em>, tích chọn ô <strong>☑️ repo</strong> -> Bấm <strong>Generate token</strong> và copy đoạn mã <code>ghp_...</code>.
+          <h3 class="text-base font-black text-slate-900">Ra Lệnh Cho Trợ Lý AI (Gemini Spark) Tự Động Quản Trị</h3>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Bạn không cần chạm vào code. Chỉ cần tạo một mã <strong>GitHub Personal Access Token</strong> (chìa khóa kết nối) và gửi câu lệnh bằng tiếng Việt cho Gemini Spark:
           </p>
 
-          <!-- Prompt Box -->
+          <div class="space-y-2">
+            <p class="text-xs font-bold text-slate-700">1. Lấy mã Token kết nối (Làm 1 lần duy nhất):</p>
+            <div class="p-3 rounded-xl bg-slate-900 text-slate-200 code-font text-xs flex items-center justify-between gap-1">
+              <span class="truncate" id="link-token">https://github.com/settings/tokens/new</span>
+              <button onclick="copyBox('link-token')" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold uppercase text-[10px] shrink-0">Sao Chép Link</button>
+            </div>
+            <p class="text-[11px] text-slate-500">
+              * Điền tên token, chọn thời hạn <em>No expiration</em>, tích chọn ô <strong>☑️ repo</strong> -> Bấm nút xanh <strong>Generate token</strong> và lưu đoạn mã <code>ghp_...</code> lại.
+            </p>
+          </div>
+
+          <!-- Prompt Template Box -->
           <div class="rounded-2xl bg-slate-950 p-4 text-slate-200 space-y-2 border border-slate-800">
             <div class="flex items-center justify-between text-xs text-amber-400 font-bold border-b border-slate-800 pb-2">
               <span>📋 MẪU CÂU LỆNH (PROMPT) GỬI CHO GEMINI SPARK:</span>
-              <button onclick="copyBox('prompt-box')" class="px-3 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] uppercase">
-                Sao Chép
+              <button onclick="copyBox('prompt-gemini')" class="px-3 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] uppercase">
+                Sao Chép Toàn Bộ
               </button>
             </div>
-            <pre class="text-xs font-mono whitespace-pre-wrap leading-relaxed select-all text-slate-300" id="prompt-box">Chào bạn Gemini Spark,
+            <pre class="text-xs font-mono whitespace-pre-wrap leading-relaxed select-all text-slate-300" id="prompt-gemini">Chào bạn Gemini Spark,
 Đây là thông tin kho GitHub website của tôi:
 - Repository: [TÊN_GITHUB_CỦA_BẠN/TÊN_KHO]
 - GitHub Token: [DÁN MÃ TOKEN ghp_... CỦA BẠN VÀO ĐÂY]
 
-Hôm nay hãy giúp tôi cập nhật website:
-1. Đăng bài viết mới tiêu đề: "[TIÊU ĐỀ BÀI VIẾT]" thuộc chuyên mục "Thư Viện Học AI".
-2. Thêm một bức tranh nghệ thuật mới vào kho ảnh: Tiêu đề "[TÊN TRANH]".
-3. Cập nhật số Hotline / Zalo của tôi thành: [SỐ ĐIỆN THOẠI CỦA BẠN].
-4. Hãy commit và push trực tiếp lên nhánh main giúp tôi. Cảm ơn bạn!</pre>
-          </div>
-        </div>
-      </div>
+Hôm nay hãy giúp tôi cập nhật website với các nội dung sau:
+1. Đăng một bài viết mới: Tiêu đề "[TIÊU ĐỀ]", chuyên mục "Thư Viện Học AI".
+2. Bổ sung một tác phẩm tranh nghệ thuật mới: Tiêu đề "[TÊN TRANH]".
+3. Cập nhật số điện thoại Hotline / Zalo của tôi thành: [SỐ ĐIỆN THOẠI].
 
-      <!-- CÁCH C: CHỈNH SỬA TRỰC TIẾP TRÊN GITHUB -->
-      <div class="step-card rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-        <div class="flex items-center gap-3">
-          <span class="w-10 h-10 rounded-2xl bg-teal-600 text-white flex items-center justify-center font-black text-lg">
-            ✏️
-          </span>
-          <div>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">
-              Cách C: Sửa Nhanh Bằng Trình Soạn Thảo GitHub (Bút Chì Hoặc Phím ".")
-            </h3>
-            <p class="text-xs text-slate-500">Dành cho việc chỉnh sửa nhanh số điện thoại, link mạng xã hội hoặc đổi chữ</p>
+Hãy đọc mã nguồn trong data.js và index.html, sau đó commit và push trực tiếp lên nhánh main giúp tôi. Xin cảm ơn!</pre>
           </div>
         </div>
 
-        <div class="space-y-2 text-xs text-slate-700 bg-slate-50 p-4 rounded-2xl border border-slate-200">
-          <p>• <strong>Sửa 1 file:</strong> Bấm vào file <code>data.js</code> trên GitHub -> Bấm icon cây bút chì ✏️ ở góc phải -> Sửa số điện thoại hoặc link YouTube -> Bấm nút xanh <strong>Commit changes</strong>.</p>
-          <p>• <strong>Sửa nhiều file cùng lúc:</strong> Nhấn phím dấu chấm <code>.</code> trên bàn phím để mở giao diện VS Code Web -> Sửa file -> Bấm Source Control -> Commit & Push.</p>
+        <!-- Cách 3: Sửa nhanh trên GitHub -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs sm:text-sm text-slate-700">
+          <span class="text-xs font-black uppercase text-slate-800 bg-slate-200 px-2.5 py-0.5 rounded-full">Cách 3 • Sửa Nhanh</span>
+          <h3 class="text-base font-black text-slate-900">Sửa Trực Tiếp File Trên GitHub Bằng Cây Bút Chì ✏️</h3>
+          <p class="text-slate-600">
+            Nếu bạn chỉ muốn sửa nhanh 1 thông tin (như đổi số Zalo, đổi link YouTube):
+            <br>1. Bấm vào file <strong><code>data.js</code></strong> trên GitHub.
+            <br>2. Bấm vào <strong>biểu tượng cây bút chì ✏️</strong> ở góc trên bên phải.
+            <br>3. Tìm dòng số điện thoại hoặc link YouTube để sửa -> Kéo xuống dưới bấm nút xanh <strong>Commit changes</strong>. Xong!
+          </p>
         </div>
+
       </div>
 
     </div>
 
-    <!-- ================= PHẦN 5: SỔ TAY XỬ LÝ SỰ CỐ THƯỜNG GẶP (FAQ) ================= -->
-    <div id="phan-5" class="rounded-3xl bg-slate-900 text-white p-6 sm:p-8 shadow-xl space-y-6">
-      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
-        <span class="w-10 h-10 rounded-2xl bg-rose-500 text-white flex items-center justify-center font-black text-lg">
-          🛠️
-        </span>
+    <!-- ================= MODULE 4 ================= -->
+    <div id="module-4" class="module-card rounded-3xl bg-white p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8">
+      
+      <div class="flex items-start gap-4 border-b border-slate-100 pb-6">
+        <div class="w-14 h-14 rounded-2xl bg-amber-500 text-slate-950 font-black text-2xl flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
+          04
+        </div>
         <div>
-          <h3 class="text-lg font-black text-white">
-            Sổ Tay Xử Lý Sự Cố Thường Gặp (FAQ)
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-extrabold uppercase tracking-wider mb-1">
+            <span>🟠 MODULE 4 • CHUYỂN GIAO & NHÂN BẢN DỰ ÁN</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-950">
+            Quy Trình Chuyển Giao Trọn Gói Cho Học Viên & Đối Tác
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Dành cho khi bạn muốn nhân bản trang web này cho người khác sở hữu
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-5 text-xs sm:text-sm text-slate-700">
+        
+        <!-- Quy trình 3 bước chuyển giao -->
+        <div class="space-y-3">
+          <h3 class="text-base font-black text-slate-900">Quy Trình 3 Bước Bàn Giao Nhanh Nhất:</h3>
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-amber-50/60 border border-amber-200">
+              <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-bold shrink-0">1</span>
+              <div>
+                <strong>Gửi đường link hoặc file zip:</strong> Gửi link GitHub kho của bạn và bảo người nhận bấm nút <strong>Fork</strong> (hoặc gửi file nén <code>TrinhAn-Life-Website.zip</code>).
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-amber-50/60 border border-amber-200">
+              <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-bold shrink-0">2</span>
+              <div>
+                <strong>Hướng dẫn bật GitHub Pages:</strong> Bảo người nhận vào <em>Settings -> Pages -> chọn Branch main -> Save</em> như ở Module 2.
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-amber-50/60 border border-amber-200">
+              <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-bold shrink-0">3</span>
+              <div>
+                <strong>Bàn giao tài khoản quản trị:</strong> Cung cấp mã PIN <strong>1979</strong> để họ tự mở giao diện <em>🔐 Quản Trị</em> và thay đổi tên, hình ảnh, bài viết của chính họ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checklist kiểm tra trước khi bàn giao -->
+        <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3">
+          <h3 class="text-sm font-black text-amber-400 flex items-center gap-2">
+            <span>✅</span> Checklist 5 Điểm Cần Kiểm Tra Trước Khi Bàn Giao:
           </h3>
-          <p class="text-xs text-slate-400">Các câu hỏi thực tế người dùng hay gặp và cách giải quyết trong 1 phút</p>
+          <ul class="space-y-1.5 text-xs text-slate-300 list-disc ml-5">
+            <li><strong>Số điện thoại & Zalo:</strong> Đã cập nhật đúng số của người sở hữu mới trong file <code>data.js</code> chưa?</li>
+            <li><strong>Kênh YouTube & Mạng xã hội:</strong> Đã trỏ đúng link kênh của người nhận chưa?</li>
+            <li><strong>Tên miền (CNAME):</strong> Nếu người nhận chưa mua tên miền riêng, đã xóa file <code>CNAME</code> để web không bị báo lỗi chưa?</li>
+            <li><strong>Mã Token bí mật:</strong> Không chia sẻ mã Token cá nhân cũ của bạn cho người khác (họ sẽ tự tạo Token riêng của họ).</li>
+            <li><strong>Mã PIN Quản trị:</strong> Hướng dẫn họ cách tự đổi mã PIN mới trong cài đặt để bảo mật riêng.</li>
+          </ul>
+        </div>
+
+        <!-- Thêm cộng tác viên -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1 text-xs">
+          <span class="font-bold text-slate-900 block">💡 Mẹo: Muốn 2 người cùng quản trị chung 1 website?</span>
+          <p class="text-slate-600">
+            Vào kho GitHub của bạn -> Bấm thẻ <strong>Settings</strong> -> Mục <strong>Collaborators</strong> (Cộng tác viên) ở cột trái -> Bấm nút xanh <strong>Add people</strong> -> Gõ tên tài khoản GitHub của người kia và gửi lời mời. Họ chấp nhận là cả 2 cùng sửa web được!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= MODULE 5 ================= -->
+    <div id="module-5" class="module-card rounded-3xl bg-slate-950 text-white p-6 sm:p-10 border border-slate-800 shadow-xl space-y-8">
+      
+      <div class="flex items-start gap-4 border-b border-slate-800 pb-6">
+        <div class="w-14 h-14 rounded-2xl bg-rose-600 text-white font-black text-2xl flex items-center justify-center shrink-0 shadow-lg shadow-rose-600/30">
+          05
+        </div>
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-rose-950 text-rose-400 border border-rose-800 text-[11px] font-extrabold uppercase tracking-wider mb-1">
+            <span>🔴 MODULE 5 • CỨU HỘ SỰ CỐ & SỬA LỖI TRONG 1 PHÚT</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white">
+            Giải Quyết Mọi Trục Trặc Người Dùng Thường Gặp
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">
+            Hầu hết các lỗi đều có nguyên nhân rất đơn giản và sửa được ngay lập tức
+          </p>
         </div>
       </div>
 
       <div class="space-y-4 text-xs">
         
-        <!-- Câu hỏi 1 -->
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+        <!-- FAQ 1: Kéo cả folder con -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
           <h4 class="font-bold text-amber-400 text-sm flex items-center gap-2">
-            <span>❓</span> Hỏi: Tôi lỡ kéo cả thư mục cha lên GitHub nên bị lọt vào thư mục con, website bị lỗi 404 thì làm sao?
+            <span>❓</span> Lỗi 1: Tôi lỡ kéo cả thư mục cha lên GitHub, website bị lỗi 404 (Không tìm thấy trang)?
           </h4>
           <p class="text-slate-300 leading-relaxed">
-            👉 <strong>Đáp:</strong> GitHub Pages chỉ tự động nhận file <code>index.html</code> nằm ở <strong>thư mục gốc ngoài cùng (Root)</strong>. Bạn có 2 cách giải quyết:
-            <br>• <strong>Cách 1:</strong> Bấm phím tắt <code>.</code> (dấu chấm) trên bàn phím -> Kéo các file bên trong thư mục con ra ngoài thư mục gốc -> Xóa thư mục cũ đi -> Commit & Push.
-            <br>• <strong>Cách 2:</strong> Mở thư mục trên máy tính ra, nhấn <code>Ctrl + A</code> để chọn các file bên trong rồi kéo thả lại vào mục <em>Add file -> Upload files</em>.
+            👉 <strong>Nguyên nhân:</strong> GitHub Pages chỉ tự động tìm file <code>index.html</code> nằm ở <strong>thư mục gốc ngoài cùng (Root)</strong>. Nếu file <code>index.html</code> bị lọt vào thư mục con (ví dụ: <code>Test-TrinhAn/Trinh-An-Chia-Se/index.html</code>) thì web sẽ không chạy.
+            <br>👉 <strong>Cách sửa siêu tốc (Không cần upload lại):</strong>
+            <br>1. Tại trang kho GitHub của bạn, nhấn phím <strong>dấu chấm <code>.</code></strong> trên bàn phím.
+            <br>2. Giao diện VS Code Web mở ra: Mở thư mục con bên trái, chọn file <code>index.html</code>, <code>data.js</code>, thư mục <code>images</code>... kéo thả thẳng ra ngoài thư mục gốc trên cùng.
+            <br>3. Chuột phải vào thư mục con rỗng vừa chuyển xong -> Chọn <strong>Delete</strong>.
+            <br>4. Bấm biểu tượng Source Control (hình nhánh cây bên trái) -> Gõ chữ lưu -> Bấm nút tích xanh <strong>Commit & Push</strong>. Xong!
           </p>
         </div>
 
-        <!-- Câu hỏi 2 -->
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+        <!-- FAQ 2: Add README trống -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
           <h4 class="font-bold text-amber-400 text-sm flex items-center gap-2">
-            <span>❓</span> Hỏi: Tại sao bấm vào nút "Add a README file" lại thấy trang trống không có file nào?
+            <span>❓</span> Thắc mắc 2: Tại sao bấm vào nút "Add a README file" lại thấy trang soạn thảo trắng tinh?
           </h4>
           <p class="text-slate-300 leading-relaxed">
-            👉 <strong>Đáp:</strong> Nút "Add a README file" là tính năng để bạn <strong>soạn một văn bản giới thiệu mới</strong> cho dự án (giống như trang bìa cuốn sách). Vì kho chưa có file này nên GitHub mở một trang trắng để bạn gõ chữ vào. Đây là bình thường, không phải bị mất file! Để xem danh sách code của bạn, hãy bấm vào chữ <strong>&lt;&gt; Code</strong> ở góc trên bên trái nhé.
+            👉 <strong>Giải thích:</strong> File <code>README.md</code> giống như "tờ bìa giới thiệu" cuốn sách. Nút "Add a README file" là tính năng để bạn <strong>tạo mới</strong> file giới thiệu này từ đầu nên GitHub mở trang trắng để bạn tự gõ chữ. Đây là bình thường, không phải bị mất file!
+            <br>👉 <strong>Cách xem file code của bạn:</strong> Chỉ cần bấm vào chữ <strong>&lt;&gt; Code</strong> ở góc trên bên trái màn hình là sẽ thấy toàn bộ file website của bạn.
           </p>
         </div>
 
-        <!-- Câu hỏi 3 -->
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+        <!-- FAQ 3: Cache F5 -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
           <h4 class="font-bold text-amber-400 text-sm flex items-center gap-2">
-            <span>❓</span> Hỏi: Tôi đã sửa nội dung trên GitHub nhưng mở trang web lên vẫn thấy nội dung cũ?
+            <span>❓</span> Lỗi 3: Tôi đã sửa nội dung trên GitHub nhưng mở trang web lên vẫn thấy nội dung cũ?
           </h4>
           <p class="text-slate-300 leading-relaxed">
-            👉 <strong>Đáp:</strong> Trình duyệt web của bạn thường lưu lại bản cũ trong bộ nhớ đệm (cache). Hãy nhấn tổ hợp phím <strong><code>Ctrl + F5</code></strong> (trên Windows) hoặc mở bằng <strong>Tab Ẩn Danh (Incognito)</strong> trên điện thoại để ép trình duyệt tải phiên bản mới nhất từ GitHub Pages về nhé.
+            👉 <strong>Nguyên nhân:</strong> Trình duyệt web của bạn đã lưu lại hình ảnh và bài viết cũ vào bộ nhớ đệm (cache) để tải cho nhanh.
+            <br>👉 <strong>Cách sửa:</strong> Nhấn tổ hợp phím <strong><code>Ctrl + F5</code></strong> (trên máy tính Windows) hoặc mở bằng <strong>Tab Ẩn Danh (Incognito)</strong> trên điện thoại để ép trình duyệt tải ngay bản mới nhất từ GitHub Pages về.
           </p>
         </div>
 
-        <!-- Câu hỏi 4 -->
-        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+        <!-- FAQ 4: Video YouTube -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
           <h4 class="font-bold text-amber-400 text-sm flex items-center gap-2">
-            <span>❓</span> Hỏi: Video YouTube muốn hiển thị trong khung phát thì cần đường link như thế nào?
+            <span>❓</span> Lỗi 4: Video YouTube trong khung phát không chịu chạy hoặc báo lỗi?
           </h4>
           <p class="text-slate-300 leading-relaxed">
-            👉 <strong>Đáp:</strong> Khung phát video YouTube cần một <strong>Mã video ID gồm 11 ký tự</strong> (ví dụ: trong link <code>https://www.youtube.com/watch?v=133gUdvBls8</code> thì mã ID là <code>133gUdvBls8</code>). Nếu bạn chỉ nhập link kênh (dạng <code>@annhienaimusictta</code>) thì hệ thống sẽ mở kênh YouTube chứ không thể nhúng toàn bộ trang kênh vào trong khung hình được.
+            👉 <strong>Nguyên nhân:</strong> Trình phát video YouTube yêu cầu <strong>Mã ID video gồm 11 ký tự</strong> (ví dụ: trong link <code>https://www.youtube.com/watch?v=133gUdvBls8</code> thì mã ID là <code>133gUdvBls8</code>).
+            <br>👉 Nếu bạn dán link kênh chung chung (như <code>@annhienaimusictta</code>) thì YouTube sẽ chặn không cho nhúng trong khung hình mà chỉ mở trang kênh thôi. Hãy dán link của một video bài hát cụ thể nhé!
           </p>
         </div>
 
       </div>
+
     </div>
 
-    <!-- PRINT & DOWNLOAD BUTTON -->
-    <div class="flex flex-wrap items-center justify-between gap-4 p-6 rounded-3xl bg-slate-900 text-white">
-      <div>
-        <h4 class="font-black text-sm text-amber-400">Bạn muốn lưu cẩm nang này về máy?</h4>
-        <p class="text-xs text-slate-400">Bạn có thể in ra giấy hoặc lưu thành file PDF để dễ dàng đọc lại bất cứ lúc nào.</p>
+    <!-- FOOTER ACTIONS & PRINT BUTTON -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl">
+      <div class="space-y-1">
+        <h4 class="font-black text-sm text-amber-400">Lưu lại cẩm nang này để tra cứu bất kỳ lúc nào:</h4>
+        <p class="text-xs text-slate-400">Bạn có thể in ra giấy hoặc lưu thành file PDF để đọc trên điện thoại mọi lúc mọi nơi.</p>
       </div>
-      <div class="flex items-center gap-2">
-        <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider transition">
+      <div class="flex items-center gap-2.5">
+        <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition active:scale-95">
           🖨️ In / Lưu Thành File PDF
         </button>
         <a href="index.html" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition">
-          ← Về Trang Chủ Web
+          ← Về Trang Chủ trinhan.life
         </a>
       </div>
     </div>
