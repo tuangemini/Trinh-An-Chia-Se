@@ -129,6 +129,36 @@ const DEFAULT_ARTWORKS = [
     meaning: "Mùa gặt trĩu hạt là thành quả ngọt ngào của sự cần lao, kiên nhẫn và lòng biết ơn đất trời.",
     views: 2890,
     tags: ["Ruộng Bậc Thang", "Mùa Vàng", "Bội Thu"]
+  },
+  {
+    id: "art-10",
+    title: "Sự Điều Độ & Sinh Lực",
+    category: "Thư Pháp & Triết Lý",
+    image: "images/anh-10.jpg",
+    prompt: "Vintage denim fabric embroidered with delicate gold threads, radiant rising sun over rolling green hills, traditional ornate border, quote 'Sự điều độ là người bạn đồng hành trung thành nhất của sinh lực', high relief embroidery, 8k --ar 9:16",
+    meaning: "Sự chừng mực và điều độ trong cuộc sống là suối nguồn nuôi dưỡng sức khỏe, giúp tâm hồn luôn an nhiên.",
+    views: 1950,
+    tags: ["Thêu Chỉ", "Điều Độ", "Sinh Lực", "Triết Lý"]
+  },
+  {
+    id: "art-11",
+    title: "Cánh Hạc Lưng Trời",
+    category: "Thư Pháp & Triết Lý",
+    image: "images/anh-11.jpg",
+    prompt: "Exquisite emerald jade carved calligraphy on textured dark slate stone, delicate lotus reliefs, serene lighting, quote 'Ăn uống thanh đạm, nếp sống điều hòa, ắt thân thể nhẹ nhõm như cánh hạc lưng trời', 8k --ar 9:16",
+    meaning: "Sống thanh đạm, tâm trí hòa cùng đất trời, thân thể tự khắc an lành, nhẹ nhõm như cánh hạc tự do.",
+    views: 2210,
+    tags: ["Ngọc Bích", "Dưỡng Sinh", "Tuệ Tĩnh", "Thư Pháp"]
+  },
+  {
+    id: "art-12",
+    title: "Tâm Tĩnh Khí Thuận",
+    category: "Thư Pháp & Triết Lý",
+    image: "images/anh-12.jpg",
+    prompt: "Masterpiece carved walnut wood relief panel, intricate traditional scroll border, antique oil lamp illuminating open wisdom book and ancient bonsai banyan tree, quote 'Tâm tĩnh thì thần an, thần an thì khí thuận, khí thuận thì bách bệnh tiêu tan', 8k --ar 9:16",
+    meaning: "Gốc của sức khỏe bắt đầu từ sự tĩnh lặng của tâm hồn. Tâm an thì khí huyết lưu thông, mọi ưu phiền tan biến.",
+    views: 2680,
+    tags: ["Điêu Khắc Gỗ", "Dưỡng Sinh", "Tâm An", "Tôn Tư Mạc"]
   }
 ];
 
@@ -591,7 +621,18 @@ window.AnNhienData = {
 
   getArtworks: function() {
     const saved = localStorage.getItem(STORAGE_KEYS.ARTWORKS);
-    return saved ? JSON.parse(saved) : DEFAULT_ARTWORKS;
+    if (!saved) return DEFAULT_ARTWORKS;
+    try {
+      let list = JSON.parse(saved);
+      // Tự động nâng cấp danh sách tranh lên đủ 12 hình (6 trên, 6 dưới)
+      if (!Array.isArray(list) || list.length < 12 || !list.some(a => a.id === 'art-10')) {
+        list = DEFAULT_ARTWORKS;
+        localStorage.setItem(STORAGE_KEYS.ARTWORKS, JSON.stringify(list));
+      }
+      return list;
+    } catch {
+      return DEFAULT_ARTWORKS;
+    }
   },
   saveArtworks: function(items) {
     localStorage.setItem(STORAGE_KEYS.ARTWORKS, JSON.stringify(items));
