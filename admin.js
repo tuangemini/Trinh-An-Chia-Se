@@ -753,13 +753,14 @@ window.AnNhienCMS = (function () {
   }
 
   function parseYouTubeId(input) {
-    if (!input) return '';
+    if (!input) return '133gUdvBls8';
     input = input.trim();
+    if (input.includes('annhienaimusictta') || input.includes('@')) return '133gUdvBls8';
     if (input.includes('v=')) return input.split('v=')[1].substring(0, 11);
     if (input.includes('youtu.be/')) return input.split('youtu.be/')[1].substring(0, 11);
     if (input.includes('/shorts/')) return input.split('/shorts/')[1].substring(0, 11);
     if (input.includes('/embed/')) return input.split('/embed/')[1].substring(0, 11);
-    return input.length === 11 ? input : 'inpok4MKVLM';
+    return input.length === 11 ? input : '133gUdvBls8';
   }
 
   function saveVideo(videoId) {

@@ -516,33 +516,56 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div class="text-center max-w-3xl mx-auto space-y-3">
-          <span class="text-xs font-black uppercase tracking-widest text-red-600 dark:text-red-400">Mục 5 • Kênh YouTube Chính Thức</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-900/50 text-red-600 dark:text-red-400 text-xs font-black uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+            Kênh YouTube Chính Thức • An Nhiên AI Music
+          </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white">
             Âm Nhạc & Video Sáng Tạo AI
           </h2>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-            Kết nối kênh YouTube <strong>An Nhiên AI Music</strong> – Nơi chia sẻ các tác phẩm MV thiền ca, bài học video và tản văn cuộc sống.
+            Kênh YouTube chính thức: <a href="https://youtube.com/@annhienaimusictta?si=kunA1o6RMYIhoEnd" target="_blank" class="font-bold text-red-600 dark:text-red-400 hover:underline">@annhienaimusictta (An Nhiên AI Music)</a> – Nơi lắng đọng cảm xúc với các ca khúc, MV và tác phẩm nghệ thuật do An Nhiên AI sáng tác.
           </p>
         </div>
 
         <!-- Featured Video Player Box -->
         <div class="max-w-4xl mx-auto rounded-3xl bg-slate-950 p-4 sm:p-6 shadow-2xl border border-slate-800 space-y-4">
           
+          <!-- Channel Header Inside Player Box -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800 text-white">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center font-black text-white text-lg shadow-lg">
+                ▶
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-black text-white text-sm sm:text-base">An Nhiên AI Music</h3>
+                  <span class="px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-[10px] font-bold">Chính Thức</span>
+                </div>
+                <p class="text-xs text-slate-400">@annhienaimusictta • Âm Nhạc & Sáng Tạo AI</p>
+              </div>
+            </div>
+            <a href="https://youtube.com/@annhienaimusictta?si=kunA1o6RMYIhoEnd" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs shadow-lg shadow-red-600/30 transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Đăng Ký Kênh YouTube
+            </a>
+          </div>
+
           <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-black shadow-inner">
-            <iframe id="mainYoutubeFrame" class="absolute inset-0 w-full h-full border-0" src="https://www.youtube.com/embed/inpok4MKVLM" allowfullscreen></iframe>
+            <iframe id="mainYoutubeFrame" class="absolute inset-0 w-full h-full border-0" src="https://www.youtube.com/embed/133gUdvBls8" allowfullscreen></iframe>
           </div>
 
           <!-- YouTube Input URL or Change Video -->
           <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-white">
             <div class="flex-1 w-full sm:w-auto">
-              <input type="text" id="customYtInput" placeholder="Dán link YouTube hoặc Shorts để xem trực tiếp..." class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs sm:text-sm text-white focus:outline-none focus:border-red-500">
+              <input type="text" id="customYtInput" placeholder="Dán link video YouTube, Shorts hoặc nhập @annhienaimusictta..." class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs sm:text-sm text-white focus:outline-none focus:border-red-500">
             </div>
             <div class="flex items-center gap-2 w-full sm:w-auto">
               <button onclick="playCustomYoutube()" class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider transition">
                 ▶ Phát Video
               </button>
               <a href="https://youtube.com/@annhienaimusictta?si=kunA1o6RMYIhoEnd" target="_blank" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs flex items-center gap-1.5 transition">
-                <span>🔴 Đăng Ký Kênh</span>
+                <span>🔴 Kênh @annhienaimusictta</span>
               </a>
             </div>
           </div>
@@ -1132,12 +1155,24 @@
     function playCustomYoutube() {
       const v = document.getElementById('customYtInput').value.trim();
       if (!v) return;
+      if (v.includes('@') || v.includes('channel') || v.includes('annhienaimusictta')) {
+        document.getElementById('mainYoutubeFrame').src = `https://www.youtube.com/embed/133gUdvBls8?autoplay=1`;
+        if (typeof showToast === 'function') {
+          showToast('Đang phát tác phẩm từ kênh An Nhiên AI Music (@annhienaimusictta)! Đang mở kênh YouTube...');
+        }
+        window.open('https://youtube.com/@annhienaimusictta?si=kunA1o6RMYIhoEnd', '_blank');
+        return;
+      }
       let id = v;
       if (v.includes('v=')) id = v.split('v=')[1].substring(0, 11);
       else if (v.includes('youtu.be/')) id = v.split('youtu.be/')[1].substring(0, 11);
       else if (v.includes('/shorts/')) id = v.split('/shorts/')[1].substring(0, 11);
       else if (v.includes('/embed/')) id = v.split('/embed/')[1].substring(0, 11);
+      else if (id.length !== 11) id = '133gUdvBls8';
       document.getElementById('mainYoutubeFrame').src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      if (typeof showToast === 'function') {
+        showToast('Đang tải và phát video...');
+      }
     }
 
     // 5. Work Guides

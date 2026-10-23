@@ -415,30 +415,30 @@ Yêu cầu: Ca từ giàu chất thơ, thuần Việt, không dùng từ sáo r�
 const DEFAULT_VIDEOS = [
   {
     id: "v-1",
-    title: "MV Thiền Ca: Tâm An Vạn Sự An | An Nhiên AI Music",
-    youtubeId: "inpok4MKVLM",
-    url: "https://www.youtube.com/watch?v=inpok4MKVLM",
-    category: "MV Âm Nhạc",
-    duration: "4:15",
-    description: "Tác phẩm âm nhạc thiền tịnh, kết hợp tiếng sáo trúc du dương và hình ảnh hoa sen thanh khiết được sáng tạo hoàn toàn bằng AI."
+    title: "GIẬT NƯỚC CHO TRÔI ĐI | An Nhiên AI | Remix Nam Trầm – Buông Muộn Phiền, Giữ Bình Yên",
+    youtubeId: "133gUdvBls8",
+    url: "https://www.youtube.com/watch?v=133gUdvBls8",
+    category: "Âm Nhạc AI",
+    duration: "4:11",
+    description: "GIẬT NƯỚC CHO TRÔI ĐI – Buông đi cho lòng nhẹ hơn, thương đi cho đời đẹp hơn. Bản remix nam trầm sâu lắng, lắng đọng tâm hồn."
   },
   {
     id: "v-2",
-    title: "Cẩm Nang 10 Phút: Hướng Dẫn Người Trung Niên Làm Quen Với AI",
-    youtubeId: "inpok4MKVLM",
-    url: "https://www.youtube.com/watch?v=inpok4MKVLM",
-    category: "Hướng Dẫn Học AI",
-    duration: "10:30",
-    description: "Video cầm tay chỉ việc từ cô Trịnh Thị An giúp các cô chú, anh chị tự tin mở và trò chuyện với trợ lý AI ngay trên điện thoại."
+    title: "TÌNH DANG DỞ | An Nhiên AI | Một Người Đã Xa, Một Đời Còn Nhớ",
+    youtubeId: "K5Vv4YC_TYk",
+    url: "https://www.youtube.com/watch?v=K5Vv4YC_TYk",
+    category: "Bản Tình Ca AI",
+    duration: "4:47",
+    description: "Bản tình ca da diết về những kỷ niệm mùa đông Đà Lạt chiều mưa, được sáng tác và hoà âm trọn vẹn bằng công nghệ âm nhạc AI."
   },
   {
     id: "v-3",
-    title: "Hành Trình Sáng Tạo 1.000 Bức Tranh Nghệ Thuật Bằng Midjourney",
-    youtubeId: "inpok4MKVLM",
-    url: "https://www.youtube.com/watch?v=inpok4MKVLM",
-    category: "Triển Lãm Nghệ Thuật",
-    duration: "6:45",
-    description: "Chiêm ngưỡng bộ sưu tập tranh Phật giáo, phong cảnh quê hương và bí quyết viết câu lệnh nghệ thuật của An Nhiên AI."
+    title: "ĐÀ LẠT CHIỀU MƯA | An Nhiên AI | Song Ca Nam Nữ – Một Cuộc Tình Còn Thương",
+    youtubeId: "IZQvLfqA6co",
+    url: "https://www.youtube.com/watch?v=IZQvLfqA6co",
+    category: "Song Ca AI",
+    duration: "5:07",
+    description: "Giai điệu song ca nam nữ ấm áp, gửi gắm nỗi niềm xưa qua phố dốc sương mờ và những hàng thông nghiêng trong mưa."
   }
 ];
 
@@ -615,7 +615,18 @@ window.AnNhienData = {
 
   getVideos: function() {
     const saved = localStorage.getItem(STORAGE_KEYS.VIDEOS);
-    return saved ? JSON.parse(saved) : DEFAULT_VIDEOS;
+    if (!saved) return DEFAULT_VIDEOS;
+    try {
+      let list = JSON.parse(saved);
+      // Tự động nâng cấp nếu phát hiện video mặc định cũ inpok4MKVLM trong bộ nhớ trình duyệt
+      if (Array.isArray(list) && (list.length === 0 || list.some(item => item.youtubeId === 'inpok4MKVLM'))) {
+        list = DEFAULT_VIDEOS;
+        localStorage.setItem(STORAGE_KEYS.VIDEOS, JSON.stringify(list));
+      }
+      return list;
+    } catch {
+      return DEFAULT_VIDEOS;
+    }
   },
   saveVideos: function(items) {
     localStorage.setItem(STORAGE_KEYS.VIDEOS, JSON.stringify(items));
