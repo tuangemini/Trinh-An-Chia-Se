@@ -29,8 +29,8 @@ const DEFAULT_BRAND = {
   domain: "trinhan.life",
   avatar: "images/avatar-trinh-an.jpg",
   role: "Nhà Sáng Tạo Nội Dung & Huấn Luyện AI Thực Chiến",
-  phone: "0912 345 678",
-  zalo: "https://zalo.me/0912345678",
+  phone: "0834 133 344",
+  zalo: "https://zalo.me/0834133344",
   email: "lienhe@trinhan.life",
   youtube: "https://www.youtube.com/@AnNhienAIMusic",
   youtubeChannelName: "An Nhiên AI Music",
@@ -569,7 +569,18 @@ window.AnNhienData = {
   // Get data with fallback
   getBrand: function() {
     const saved = localStorage.getItem(STORAGE_KEYS.BRAND);
-    return saved ? { ...DEFAULT_BRAND, ...JSON.parse(saved) } : DEFAULT_BRAND;
+    if (!saved) return DEFAULT_BRAND;
+    try {
+      const parsed = JSON.parse(saved);
+      if (parsed.phone === '0912 345 678' || !parsed.phone) {
+        parsed.phone = DEFAULT_BRAND.phone;
+        parsed.zalo = DEFAULT_BRAND.zalo;
+        localStorage.setItem(STORAGE_KEYS.BRAND, JSON.stringify(parsed));
+      }
+      return { ...DEFAULT_BRAND, ...parsed };
+    } catch {
+      return DEFAULT_BRAND;
+    }
   },
   saveBrand: function(brandData) {
     localStorage.setItem(STORAGE_KEYS.BRAND, JSON.stringify(brandData));

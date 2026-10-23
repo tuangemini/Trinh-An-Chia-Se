@@ -47,7 +47,7 @@ CÁC DỊCH VỤ VÀ HOẠT ĐỘNG CHÍNH:
    - Kèm cặp cá nhân 1-1 chuyên sâu cùng cô Trịnh Thị An.
    - Lớp chuyên đề sáng tạo nghệ thuật & làm video/nhạc AI.
    - Dịch vụ sáng tạo nội dung & thiết kế theo đơn đặt hàng.
-7. Hotline / Zalo: 0912 345 678 (hoặc bấm nút "Đăng Ký Học" / "Đặt Vẽ Tranh" trên website).
+7. Hotline / Zalo: 0834 133 344 (hoặc bấm nút "Đăng Ký Học" / "Đặt Vẽ Tranh" trên website).
 
 QUY TẮC PHỤC VỤ CỦA BẠN:
 1. Xưng hô lễ phép, ấm áp, khiêm nhường ("Dạ xin kính chào Quý khách/Quý anh chị", "Em/Tôi xin được hỗ trợ Quý anh chị").
@@ -111,7 +111,7 @@ Quý anh chị chỉ cần bấm nút **"Sao chép" (1-Click)** là có thể d�
 
     if (text.includes('liên hệ') || text.includes('số điện thoại') || text.includes('sđt') || text.includes('zalo') || text.includes('hotline')) {
       return `Dạ, Quý anh chị có thể liên hệ trực tiếp với cô **Trịnh Thị An** qua:
-- **Hotline / Zalo:** 0912 345 678
+- **Hotline / Zalo:** 0834 133 344
 - **Email:** lienhe@trinhan.life
 - Hoặc để lại lời nhắn kèm số điện thoại ngay tại đây, cô An sẽ liên hệ lại sớm nhất ạ!`;
     }
